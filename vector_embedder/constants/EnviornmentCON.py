@@ -1,0 +1,8 @@
+from os import getenv
+
+
+class EnvironmentCON:
+    DATABASE_USER = getenv("ACENDLY_DATABASE_USERNAME")
+    DATABASE_PASSWORD = getenv("ACENDLY_DATABASE_PASSWORD")
+    DATABASE_NAME = getenv("ACENDLY_DATABASE_NAME")
+    DATABASE_URL = getenv("ACENDLY_DATABASE_URL")

@@ -1,0 +1,8 @@
+[package]
+name = "semantic_summarizer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tree-sitter = "0.26.7"
+tree-sitter-typescript = "0.23.2"
