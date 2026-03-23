@@ -90,8 +90,7 @@ class EventBus {
   publish(event: Event): void {
     const handlers = this.handlers[event.type];
     if (handlers) {
-      for (const handler of handlers) {
-        handler(event as any);
+      for (const handler of handlers) handler(event as any);
       }
     }
   }

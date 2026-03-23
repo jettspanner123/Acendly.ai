@@ -1,14 +1,12 @@
-import sqlalchemy.engine
-from fastapi import FastAPI
-
 from config.AlchemyEngineConfig import AlchemyEngineConfig
-from controllers.AIController import ai_router
+from controllers.AIController import AI_ROUTER
 from controllers.EmbeddingController import EMBEDDING_ROUTER
 from database.AlchemyEngineStore import AlchemyEngineStore
 from database.entities.DBase import DBase
 from helpers.EnviornmentVariables import EnvironmentVariableValidator
+from stores.RootApplicationStore import RootApplicationStore
 
-application = FastAPI()
+application = RootApplicationStore.APPLICATION
 
 # Fallback
 EnvironmentVariableValidator.validate_env_variables()
@@ -19,5 +17,5 @@ DBase.metadata.create_all(AlchemyEngine)
 AlchemyEngineConfig.make_sure_pg_vector_exists(AlchemyEngine)
 
 # Adding Controllers
-application.include_router(ai_router)
+application.include_router(AI_ROUTER)
 application.include_router(EMBEDDING_ROUTER)
