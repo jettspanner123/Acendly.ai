@@ -1,0 +1,6 @@
+@coordinator_HostAddress = http://localhost:5290
+
+GET {{coordinator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

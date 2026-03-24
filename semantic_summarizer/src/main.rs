@@ -1,8 +1,11 @@
 mod abstract_syntax_tree;
 mod summarizer;
+pub mod controllers;
+mod models;
 
 use std::env;
 use std::fs;
+use crate::controllers::abstract_syntax_tree_controller::AbstractSyntaxTreeController;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
