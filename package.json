@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:secrets": "bash -c 'source ./scripts/dev-secrets.sh && exec $SHELL'"
+    "dev:secrets": "bash -c 'source ./scripts/dev-secrets.sh && exec $SHELL'",
+    "dev:open": "bash -c 'source ./scripts/dev-open.sh && exec $SHELL'"
   }
 }

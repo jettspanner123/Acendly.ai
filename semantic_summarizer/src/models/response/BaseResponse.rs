@@ -1,7 +1,7 @@
 use serde::Serialize;
 
-#[derive(Serialize)]
-pub struct BaseResponse {
+#[derive(Serialize, Debug)]
+struct BaseResponse {
     success: bool,
     message: String
 }
