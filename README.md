@@ -34,9 +34,34 @@ Acendly.ai is a multi-language, multi-service AI platform designed for rapid dev
 
 | Language | Main Frameworks / Libraries |
 |----------|-----------------------------|
-| 🦀 **Rust** | Cargo, [tokio](https://tokio.rs/), [serde](https://serde.rs/) |
-| 🐍 **Python** | [FastAPI](https://fastapi.tiangolo.com/), [SQLAlchemy](https://www.sqlalchemy.org/), [NumPy](https://numpy.org/), [Typer](https://typer.tiangolo.com/), [Uvicorn](https://www.uvicorn.org/) |
-| ⚙️ **C# (.NET)** | .NET 10, ASP.NET Core |
+| 🦀 **Rust** | Cargo, [tree-sitter](https://tree-sitter.github.io/tree-sitter/), [tokio](https://tokio.rs/), [serde](https://serde.rs/) |
+| 🐍 **Python** | [FastAPI](https://fastapi.tiangolo.com/), [SQLAlchemy](https://www.sqlalchemy.org/), [Pydantic](https://docs.pydantic.dev/), [pgvector](https://github.com/pgvector/pgvector), [Ollama](https://ollama.com/) |
+| ⚙️ **C# (.NET)** | .NET 10, ASP.NET Core, OpenAPI |
+
+---
+
+## 🧩 Technology Usage Details
+
+| Technology | Where it’s used (path) | What it does in this repo |
+|------------|-------------------------|----------------------------|
+| 🦀 **Rust** | `semantic_summarizer/` | Implements the semantic summarization / AST service. |
+| **tree-sitter** | `semantic_summarizer/src/helpers/ASTServiceHelper.rs` | Parses source text into an AST (`Parser`, `Tree`, `Node`). |
+| **tree-sitter-typescript** | `semantic_summarizer/src/helpers/ASTServiceHelper.rs` | Supplies the TypeScript grammar used during parsing. |
+| **tokio** | `semantic_summarizer/src/main.rs` | Provides the async runtime for the Rust service entrypoint. |
+| **serde** | `semantic_summarizer/src/models/response/BaseResponse.rs` | Derives serialization for response models. |
+| **serde_json** | `semantic_summarizer/Cargo.toml` | Declared dependency (no in-code references yet). |
+| **axum** | `semantic_summarizer/Cargo.toml` | Declared dependency (no in-code references yet). |
+| 🐍 **Python** | `vector_embedder/` | Implements the embedding API service. |
+| **FastAPI** | `vector_embedder/stores/RootApplicationStore.py`, `vector_embedder/controllers/*` | Defines the API application and routers/endpoints. |
+| **Pydantic** | `vector_embedder/models/request/*`, `vector_embedder/models/response/*` | Request/response DTO validation and typing. |
+| **SQLAlchemy** | `vector_embedder/database/*`, `vector_embedder/controllers/EmbeddingController.py` | Database engine config, ORM models, and query/session usage. |
+| **pgvector** | `vector_embedder/database/entities/OP_EmbeddingTBL.py` | Vector column type used to store embeddings and perform similarity queries. |
+| **Ollama** | `vector_embedder/services/EmbeddingService.py` | Generates embeddings via `ollama.embed(...)`. |
+| ⚙️ **C# / .NET 10** | `coordinator/` | Coordinator/orchestration service skeleton. |
+| **ASP.NET Core** | `coordinator/Program.cs`, `coordinator/Controllers/ASTController.cs` | Minimal API host + controller scaffolding. |
+| **Microsoft.AspNetCore.OpenApi** | `coordinator/Program.cs` | Adds OpenAPI endpoints in development. |
+| **Node.js (npm scripts)** | `package.json` | Runs dev helper scripts from the repo root. |
+| **Bash** | `scripts/dev-open.sh`, `scripts/dev-secrets.sh` | Local dev convenience scripts sourced by npm scripts. |
 
 ---
 
