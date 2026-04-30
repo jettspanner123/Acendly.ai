@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jettspanner123/RustDevelopment/gand-phad-ai/coordinator/coordinator.csproj": {}
+    "/Users/jettspanner123/RustDevelopment/acendly-nexus-runtime/SourceCode/coordinator/coordinator.csproj": {}
   },
   "projects": {
-    "/Users/jettspanner123/RustDevelopment/gand-phad-ai/coordinator/coordinator.csproj": {
+    "/Users/jettspanner123/RustDevelopment/acendly-nexus-runtime/SourceCode/coordinator/coordinator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jettspanner123/RustDevelopment/gand-phad-ai/coordinator/coordinator.csproj",
+        "projectUniqueName": "/Users/jettspanner123/RustDevelopment/acendly-nexus-runtime/SourceCode/coordinator/coordinator.csproj",
         "projectName": "coordinator",
-        "projectPath": "/Users/jettspanner123/RustDevelopment/gand-phad-ai/coordinator/coordinator.csproj",
+        "projectPath": "/Users/jettspanner123/RustDevelopment/acendly-nexus-runtime/SourceCode/coordinator/coordinator.csproj",
         "packagesPath": "/Users/jettspanner123/.nuget/packages/",
-        "outputPath": "/Users/jettspanner123/RustDevelopment/gand-phad-ai/coordinator/obj/",
+        "outputPath": "/Users/jettspanner123/RustDevelopment/acendly-nexus-runtime/SourceCode/coordinator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jettspanner123/.nuget/NuGet/NuGet.Config"
