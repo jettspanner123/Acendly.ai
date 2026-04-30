@@ -87,16 +87,4 @@ Acendly.ai is a multi-language, multi-service AI platform designed for rapid dev
 
 ---
 
-## 🤝 Contributing
-
-We love contributions! Feel free to open issues, submit PRs, or suggest features.
-
----
-
-## 🌐 Connect
-- 🐙 [GitHub](https://github.com/jettspanner123/Acendly.ai)
-- 💬 Issues & Discussions: Use the GitHub repo
-
----
-
 > _Happy hacking!_ 🚀✨
